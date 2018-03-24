@@ -9,13 +9,13 @@ factor	EQU 2
 myDiv	TEXTEQU <mov ecx, factor>
 
 .data
-num1	DWORD 41
-num2	DWORD 50
+num1	DWORD 40
+num2	DWORD 51
 
 .code
 main PROC
 	mov edx, 0        
-	mov eax, num1	  
+	mov eax, num1  
 	myDiv
 	div ecx           ; EAX contains the result of division, EDX contains the remainder
 

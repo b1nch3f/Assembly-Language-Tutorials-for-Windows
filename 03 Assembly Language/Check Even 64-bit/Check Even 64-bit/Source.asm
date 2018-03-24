@@ -10,7 +10,7 @@ res		QWORd 0
 .code
 main PROC
 	mov rdx, 0        ; clear dividend
-	mov rax, num2     ; dividend
+	mov rax, num1     ; dividend
 	mov rcx, 2        ; divisor
 	div rcx           ; RAX contains the result of division, RDX contains the remainder
 
