@@ -30,8 +30,11 @@ sum DWORD 0
 
 .code
 main PROC
-  mov ecx, 0
+  mov rax, 0
+  add rax, 1
+  add rax, 5
+
   call ExitProcess
 main ENDP
-END main
+END
 ```
