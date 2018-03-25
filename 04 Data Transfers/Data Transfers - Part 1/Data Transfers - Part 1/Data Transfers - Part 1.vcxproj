@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{7E7A0CCB-910E-4AE6-9CEF-0C8A5B4061B7}</ProjectGuid>
-    <RootNamespace>DataTransfers</RootNamespace>
+    <ProjectGuid>{AB5056A1-BB45-465B-B4B1-07608AFF52C1}</ProjectGuid>
+    <RootNamespace>DataTransfersPart1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -122,7 +122,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <MASM Include="Source.asm" />
+    <MASM Include="Source.asm">
+      <FileType>Document</FileType>
+    </MASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
