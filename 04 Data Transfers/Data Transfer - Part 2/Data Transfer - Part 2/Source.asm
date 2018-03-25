@@ -28,10 +28,9 @@ main proc
 
 	xor esi, esi
 	xor eax, eax
-	mov esi, offset myArray
-	mov eax, [esi] 
-	mov eax, [esi+4]
-	mov eax, [esi+8]
+	mov eax, myArray[esi] 
+	mov eax, myArray[esi+4]
+	mov eax, myArray[esi+8]
 
 	mov eax, highway
 
