@@ -34,6 +34,7 @@ main PROC
 	;TEST
 	mov	al, 1001b
 	test al, 1001b
+	
 	;CMP
 	cmp al, 1011b
 
