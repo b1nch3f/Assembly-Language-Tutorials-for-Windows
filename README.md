@@ -1,6 +1,5 @@
 ## Assembly Language Tutorials for Windows
 
-
 ```
 ; 32-BIT Template
 
