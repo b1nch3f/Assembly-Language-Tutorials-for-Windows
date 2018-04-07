@@ -13,10 +13,12 @@ num1 DWORD 5
 main PROC
 	push num1
 	push num1
-	call addProc@8
+	call addProc@8 ;stdcall
 
 	push num1
-	call Factorial@4
+	push num1
+	call addProc2@0 ;cdecl 
+	add esp, 8 
 
 	push 0
 	call ExitProcess@4

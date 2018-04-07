@@ -18,7 +18,7 @@
     <MASM Include="Source.asm">
       <Filter>Source Files</Filter>
     </MASM>
-    <MASM Include="Factorial.asm">
+    <MASM Include="mylib.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

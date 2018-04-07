@@ -122,7 +122,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <MASM Include="Factorial.asm" />
+    <MASM Include="mylib.asm" />
     <MASM Include="Source.asm" />
   </ItemGroup>
   <ItemGroup>
