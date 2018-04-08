@@ -1,0 +1,2 @@
+cd /d "C:\Tutorials\Assembly Language Tutorials for Windows\09 Strings and Arrays\Strings and Arrays - Part 1\Strings and Arrays - Part 1" &msbuild "Strings and Arrays - Part 1.vcxproj" /t:sdvViewer /p:configuration="Debug" /p:platform=Win32
+exit %errorlevel% 

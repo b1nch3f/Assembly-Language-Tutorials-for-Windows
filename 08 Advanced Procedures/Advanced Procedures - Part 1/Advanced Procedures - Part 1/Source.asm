@@ -27,11 +27,10 @@ main PROC
 main ENDP
 
 addNums PROC
-	push ebp
-	mov ebp, esp
+	enter 0, 0
 	mov eax, [ebp + 12]
 	add eax, [ebp + 8]
-	pop ebp
+	leave
 	ret 8	;stdcall calling convention, the calee clears the stack, used by WinAPI
 addNums ENDP
 
@@ -39,7 +38,7 @@ localProc PROC
 	push ebp
 	mov ebp, esp
 	sub esp, 8
-	mov dword ptr [ebp - 4], 5
+	mov dword ptr [ebp - 4], 3
 	mov dword ptr [ebp - 8], 6
 	mov esp, ebp
 	pop ebp

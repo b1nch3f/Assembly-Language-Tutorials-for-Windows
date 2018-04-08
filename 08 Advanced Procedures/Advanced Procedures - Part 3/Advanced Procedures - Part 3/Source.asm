@@ -14,7 +14,9 @@ main PROC
 	push num1
 	push num1
 	call addProc@8 ;stdcall
-
+	
+	nop
+	
 	push num1
 	push num1
 	call addProc2@0 ;cdecl 
