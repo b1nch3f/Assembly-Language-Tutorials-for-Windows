@@ -8,11 +8,13 @@ STD_INPUT_HANDLE	EQU -10
 STD_OUTPUT_HANDLE	EQU -11
 STD_ERROR_HANDLE	EQU -12
 
+HANDLE TEXTEQU <DWORD>
+
 GetStdHandle PROTO,
-	nStdHandle:DWORD
+	nStdHandle:HANDLE
 
 WriteConsoleA PROTO,
-	hConsoleOutput:DWORD,
+	hConsoleOutput:HANDLE,
 	lpBuffer:PTR BYTE,
 	nNumberOfCharsToWrite:DWORD,
 	lpNumberOfCharsWritten:PTR DWORD,
@@ -22,10 +24,8 @@ ExitProcess PROTO,
 	dwExitCode:DWORD
 
 .data
-endl		EQU <0dh,0ah>
-message		BYTE "Hello world",endl
-messageSize	DWORD ($ - message)
-
+myStr			BYTE "Hello-world", 0dh, 0ah
+myStrSize		DWORD ($ - myStr)
 consoleHandle	DWORD 0
 bytesWritten	DWORD ?
 
@@ -33,12 +33,12 @@ bytesWritten	DWORD ?
 main PROC
 	push STD_OUTPUT_HANDLE
 	call GetStdHandle
-	mov consoleHandle, eax
+	mov consoleHandle, eax ;preserve handle, we'll use this in WriteConsoleA API call
 
 	push 0
 	push OFFSET bytesWritten
-	push messageSize
-	push OFFSET message
+	push myStrSize
+	push OFFSET myStr
 	push consoleHandle
 	call WriteConsoleA
 
